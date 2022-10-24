@@ -5,7 +5,7 @@ pipeline{
 	stages {
 		stage('Test') {
 			steps{
-				sh 'curl localhost:8000'
+				echo "This worked"
 			}
 		}
 	}
