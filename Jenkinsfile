@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage ('image build and Push') {
       steps {
-           docker build -t server .
-           docker push server
+           docker build . -t server
            docker run -d -p 8000 server
       }
     }
