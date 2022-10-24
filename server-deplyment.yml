@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server_deployment
+  labels:
+    app: ishmailbari/server
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: ishmailbari/server
+  template:
+    metadata:
+      labels:
+        app: ishmailbari/server
+    spec:
+      containers:
+      - name: server
+        image: ishmailbari/server:latest
+        ports:
+        - containerPort: 8000
