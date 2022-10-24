@@ -1,11 +1,9 @@
-pipeline{
-	agent {
-		docker { image 'python:0.1'}
-	}
+pipeline {
+	agent any
 	stages {
-		stage('Test') {
+		stage('Checkout Code') {
 			steps{
-				echo "This worked"
+				git(url: 'https://github.com/IshmailBari/ishmailbc270pythonhttpserver.git', branch: 'main')
 			}
 		}
 	}
