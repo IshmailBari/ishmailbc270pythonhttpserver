@@ -1,5 +1,5 @@
-peline{
-	agemt {
+pipeline{
+	agent {
 		docker { image 'python:0.1'}
 	}
 	stages {
