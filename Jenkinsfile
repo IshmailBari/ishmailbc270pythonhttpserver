@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage ('Build) {
+    stage ('Build') {
            agent {
              docker {
                image 'ishmailbari/server:latest'
