@@ -1,9 +1,11 @@
 pipeline {
-  agent any
+  agent{
+    docker { image 'ishmailbari/server:latest'}
+  }
   stages {
     stage ('image build and Push') {
       steps {
-        docker.image('ishmailbari/server:latest').withRun('-p 8000:8000')
+        sh 'python3 --version'
       }
     }
   }
