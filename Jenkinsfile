@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('image build and Push') {
       steps {
-           docker run -p 8000:8000 ishmailbari/server:latest
+           docker run -p 8080:8080 ishmailbari/server:latest
       }
     }
   }
